@@ -5,134 +5,283 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conference Management Portal - IIT Roorkee</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #002855;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    section {
-      padding: 2rem 1.5rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      border-left: 5px solid #002855;
-      padding-left: 1rem;
-      margin-top: 2rem;
-    }
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-    ul li::before {
-      content: '✔️';
-      margin-right: 0.5rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    th, td {
-      padding: 0.75rem;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-    }
-    footer {
-      text-align: center;
-      background: #eee;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #0073e6;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <button id="darkToggle" title="Toggle dark/light mode">
+    <i class="fas fa-sun" id="sunIcon"></i>
+    <i class="fas fa-moon" id="moonIcon" style="display:none;"></i>
+  </button>
+
   <header>
-    <h1>👨‍💻 Conference Management Portal - IIT Roorkee</h1>
-    <p>Developed with ❤️ by CMP Team</p>
+    <div class="header-content">
+      <h1><i class="fas fa-laptop-code"></i> Conference Management Portal</h1>
+      <p>IIT Roorkee's comprehensive solution for academic conference management</p>
+    </div>
   </header>
 
-  <section>
-    <h2>🚀 Project Overview</h2>
-    <p>The <strong>Conference Management Portal</strong> is a centralized web application tailored for the needs of IIT Roorkee. It supports:</p>
-    <ul>
-      <li>📥 Paper/Abstract Submission</li>
-      <li>📝 Review & Approval System</li>
-      <li>💳 Payment Integration (if applicable)</li>
-      <li>📄 Certificate Generation</li>
-      <li>📧 Automated Email Notifications</li>
-      <li>💬 Chat & Support Feature for Attendees</li>
-    </ul>
-    <p><em>From organizing paper tracks to sending notifications — CMP simplifies it all.</em></p>
+  <div class="container">
+    <section id="overview" class="fade-in">
+      <h2 class="section-title"><i class="fas fa-rocket"></i> Project Overview</h2>
+      <div class="card">
+        <p>The <strong>Conference Management Portal</strong> is a centralized web application tailored for the academic
+          needs of IIT Roorkee, designed to streamline conference organization and participation.</p>
 
-    <h2>👨‍👩‍👧‍👦 Developed by CMP Team</h2>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>LinkedIn</th>
-      </tr>
-      <tr>
-        <td>Rishabh</td>
-        <td><a href="https://www.linkedin.com/in/rishabh-prime/" target="_blank">linkedin.com/in/rishabh-prime</a></td>
-      </tr>
-      <tr>
-        <td>Divyanshu Verma</td>
-        <td><a href="https://www.linkedin.com/in/divyanshu-verma-9a9ab9225/" target="_blank">linkedin.com/in/divyanshu-verma</a></td>
-      </tr>
-      <tr>
-        <td>Arushi Gupta</td>
-        <td><a href="https://www.linkedin.com/in/arushi-gupta-b8446b228/" target="_blank">linkedin.com/in/arushi-gupta</a></td>
-      </tr>
-      <tr>
-        <td>Prachi Jha</td>
-        <td><a href="https://www.linkedin.com/in/prachi-jha-15772b22b/" target="_blank">linkedin.com/in/prachi-jha</a></td>
-      </tr>
-    </table>
+        <div class="features">
+          <div class="feature-item">
+            <i class="fas fa-file-upload feature-icon"></i>
+            <h3 class="feature-title">Paper Submission</h3>
+            <p>Easy upload system for abstracts and full papers with version tracking</p>
+          </div>
 
-    <h2>🛠️ Tech Stack</h2>
-    <ul>
-      <li><strong>Frontend:</strong> EJS / HTML / CSS / JS</li>
-      <li><strong>Backend:</strong> Node.js / Express.js</li>
-      <li><strong>Database:</strong> MongoDB</li>
-      <li><strong>Hosting:</strong> AWS / GCP / Digital Ocean / Render / Vercel / Institute Server</li>
-      <li><strong>Tools:</strong> Git, GitHub, Figma, Postman</li>
-    </ul>
+          <div class="feature-item">
+            <i class="fas fa-clipboard-check feature-icon"></i>
+            <h3 class="feature-title">Review System</h3>
+            <p>Comprehensive review workflow with customizable criteria and feedback</p>
+          </div>
 
-    <h2>📬 Contact & Contributions</h2>
-    <p>Interested in contributing or deploying this for your institute's conferences?<br>
-      Feel free to reach out via LinkedIn to any team member or open an issue in the repository.</p>
+          <div class="feature-item">
+            <i class="fas fa-credit-card feature-icon"></i>
+            <h3 class="feature-title">Payment Integration</h3>
+            <p>Secure payment gateway for registration fees and additional services</p>
+          </div>
 
-    <h2>🧠 Acknowledgements</h2>
-    <p>Special thanks to the professors and admin staff of IIT Roorkee who provided constant feedback and support throughout the development of this portal.</p>
+          <div class="feature-item">
+            <i class="fas fa-certificate feature-icon"></i>
+            <h3 class="feature-title">E-Certificate Generation</h3>
+            <p>Automated creation of participation and presentation certificates</p>
+          </div>
 
-    <blockquote><em>“Technology is best when it brings people together.”<br>— Matt Mullenweg</em></blockquote>
-  </section>
+          <div class="feature-item">
+            <i class="fas fa-envelope feature-icon"></i>
+            <h3 class="feature-title">Email Notifications</h3>
+            <p>Automated alerts for deadlines, reviews, and important updates</p>
+          </div>
+
+          <div class="feature-item">
+            <i class="fas fa-comments feature-icon"></i>
+            <h3 class="feature-title">Support System</h3>
+            <p>Real-time chat and ticketing system for attendee assistance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="slide-up">
+      <h2 class="section-title"><i class="fas fa-images"></i> Portal Screenshots</h2>
+      <div class="screenshots">
+        <div class="screenshot-item">
+          <h3><i class="fas fa-sign-in-alt"></i> Login</h3>
+          <img src="/assets/Desktop-1.png" alt="Login Screenshot" class="screenshot-img">
+        </div>
+        <div class="screenshot-item">
+          <h3><i class="fas fa-tachometer-alt"></i> Dashboard</h3>
+          <img src="/assets/Desktop-2.png" alt="Dashboard Screenshot" class="screenshot-img">
+        </div>
+      </div>
+    </section>
+    <section id="demo" class="fade-in">
+      <h2 class="section-title"><i class="fas fa-laptop"></i> Try Our Demo</h2>
+      <div class="card">
+        <p>Experience the Conference Management Portal firsthand with our interactive demo. Access all features and
+          explore the functionality using the credentials below:</p>
+
+        <div class="demo-credentials">
+          <div class="credential-card">
+            <i class="fas fa-user-shield credential-icon"></i>
+            <h3>Admin Access</h3>
+            <p><strong>Email:</strong> admin@cmp.com</p>
+            <p><strong>Password:</strong> 123456</p>
+          </div>
+
+          <div class="credential-card">
+            <i class="fas fa-user credential-icon"></i>
+            <h3>User Access</h3>
+            <p><strong>Email:</strong> user@cmp.com</p>
+            <p><strong>Password:</strong> 123456</p>
+          </div>
+        </div>
+
+        <div class="demo-action">
+          <a href="https://cmp-iitr-2be7396d3944.herokuapp.com/" target="_blank" class="btn">
+            <i class="fas fa-external-link-alt"></i> Launch Demo
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="team" class="fade-in">
+      <h2 class="section-title"><i class="fas fa-users"></i> Our Amazing Team</h2>
+      <div class="team-grid">
+
+        <div class="team-member">
+          <img src="/assets/Arushi.jpeg" alt="Arushi Gupta">
+          <h3>Arushi Gupta</h3>
+          <p>Frontend Developer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/arushi-gupta-b8446b228/" target="_blank" class="social-btn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-btn">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="/assets/Divyanshu.jpeg" alt="Divyanshu Verma">
+          <h3>Divyanshu Verma</h3>
+          <p>UI/UX Designer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/divyanshu-verma-9a9ab9225/" target="_blank" class="social-btn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/divyanshuverma9785" class="social-btn">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+
+
+        <div class="team-member">
+          <img src="/assets/Prachi.jpeg" alt="Prachi Jha">
+          <h3>Prachi Jha</h3>
+          <p>Backend Developer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/prachi-jha-15772b22b/" target="_blank" class="social-btn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-btn">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <img src="/assets/Rishabh.jpeg" alt="Rishabh">
+          <h3>Rishabh</h3>
+          <p>Backend Developer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/rishabh-prime/" target="_blank" class="social-btn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Rishabhspace" class="social-btn">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="tech" class="slide-up">
+      <h2 class="section-title"><i class="fas fa-code"></i> Tech Stack</h2>
+      <div class="tech-stack">
+        <div class="tech-item">
+          <i class="fab fa-html5 tech-icon"></i>
+          <h3>HTML5/EJS</h3>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-css3-alt tech-icon"></i>
+          <h3>CSS3</h3>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-js tech-icon"></i>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-node-js tech-icon"></i>
+          <h3>Node.js</h3>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-npm tech-icon"></i>
+          <h3>Express.js</h3>
+        </div>
+        <div class="tech-item">
+          <i class="fas fa-database tech-icon"></i>
+          <h3>MongoDB</h3>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-aws tech-icon"></i>
+          <h3>AWS/Cloud</h3>
+        </div>
+        <div class="tech-item">
+          <i class="fab fa-git-alt tech-icon"></i>
+          <h3>Git/GitHub</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2 class="section-title"><i class="fas fa-paper-plane"></i> Contact Us</h2>
+      <div class="card">
+        <p>Interested in contributing or deploying this for your institute's conferences? We'd love to hear from you!
+        </p>
+
+        <!-- Success message will appear after submission (hidden by default) -->
+        <div id="form-success" style="display: none;" class="success-message">
+          <i class="fas fa-check-circle"></i> Thank you for your message! We'll get back to you soon.
+        </div>
+
+        <!-- Error message will appear if submission fails (hidden by default) -->
+        <div id="form-error" style="display: none;" class="error-message">
+          <i class="fas fa-exclamation-circle"></i> There was a problem sending your message. Please try again.
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="form-group full">
+            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+          </div>
+          <div class="form-group full">
+            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <!-- Honeypot field to prevent spam -->
+          <div style="display: none;">
+            <input type="text" name="_gotcha">
+          </div>
+          <div class="form-group full">
+            <button type="submit" class="btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="acknowledgements">
+      <h2 class="section-title"><i class="fas fa-award"></i> Acknowledgements</h2>
+      <div class="quote">
+        <p>Special thanks to the professors and administrative staff of IIT Roorkee who provided constant feedback and
+          support throughout the development of this portal.</p>
+        <p>"Technology is best when it brings people together."</p>
+        <cite>— Matt Mullenweg</cite>
+      </div>
+    </section>
+  </div>
+
+  <button onclick="topFunction()" id="topBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <footer>
-    Developed with ❤️ by <a href="#">CMP Team</a>
+    <div class="footer-content">
+      <p>Developed with <i class="fas fa-heart" style="color: #ff4757;"></i> by CMP Team</p>
+      <p>&copy; 2025 | Conference Management Portal - IIT Roorkee</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
