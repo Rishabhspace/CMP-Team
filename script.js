@@ -55,20 +55,21 @@ const darkToggle = document.getElementById("darkToggle");
 const sunIcon = document.getElementById("sunIcon");
 const moonIcon = document.getElementById("moonIcon");
 
-// Check for saved user preference
-const prefersDark =
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
+// Check only for explicitly saved user preference
 const savedTheme = localStorage.getItem("theme");
 
-// If user has a saved preference, use it, otherwise use system preference
-if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+// Only use dark if explicitly saved as dark
+if (savedTheme === "dark") {
   document.body.classList.add("dark-mode");
   moonIcon.style.display = "none";
+  sunIcon.style.display = "block";
 } else {
+  // Default to light theme
   document.body.classList.remove("dark-mode");
   sunIcon.style.display = "none";
+  moonIcon.style.display = "block";
 }
+
 darkToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
   if (document.body.classList.contains("dark-mode")) {
