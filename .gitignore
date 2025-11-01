@@ -1,0 +1,93 @@
+# macOS / Finder
+# Finder metadata and resource forks
+.DS_Store
+Icon?
+._*
+.AppleDouble
+.LSOverride
+
+# macOS-generated folders
+.Spotlight-V100
+.Trashes
+.TemporaryItems
+.fseventsd/
+.DocumentRevisions-V100/
+.VolumeIcon.icns
+
+# Other macOS/osx cruft
+Network Trash Folder
+.AppleDB
+.AppleDesktop
+
+# Thumbnails
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+build/
+out/
+coverage/
+public/build/
+
+# Environment files
+.env
+.env.*
+.env.local
+.env.production
+.env.development
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# Misc
+.cache/
+.parcel-cache/
+.sass-cache/
+/.next/
+.nuxt/
+/.vercel/
+/.firebase/
+/.cache-loader/
+coverage/
+
+# Temporary files
+*~
+*.swp
+*.swo
+
+# Secrets and keys
+secret-*.key
+*.pem
+*.p12
+
+# OS generated files
+.DS_Store
+*.class
+*.log
+
+# Map files
+*.map
+
+# Ignore built assets in assets folder (if any)
+assets/**/*.map
